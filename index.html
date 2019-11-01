@@ -10,6 +10,19 @@
 
 <body>
     <h1>版權屬於鏡文學，若您有任何需求以及疑問，歡迎來信：5487@qq.com </h1>
+    <a href="https://www.mirrorfiction.com/">原網站連結 </a> <br />
+
+
+    <span> call 一篇文章的語法： </span> <br />
+    <code>
+      Array.prototype.map.call( document.getElementById('content').childNodes, (e) => e.innerText ).join('\n')
+      
+    </code>
+    <p>
+      innerText 可以無視 巢狀 tag 的樣子
+      之前可以用 API 一次 call 整個網站的文章，現在只能用 DOM select 一次拿一篇
+      防護機制是 因為 res 被加密
+    </p>
 
     <h2>
             序幕1：埋在矛盾、謎霧和問號深處的名字
