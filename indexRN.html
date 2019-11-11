@@ -2,8 +2,9 @@
 <body>
 
 <button>Send post message from web</button>
-<div>Post message log</div>
+<div>Post message log 2</div>
 <textarea style="height: 50%; width: 100%;" readonly></textarea>
+    
 
 <script>
 var log = document.querySelector("textarea");
@@ -32,13 +33,13 @@ document.addEventListener("message", function (event) {
 //     window.parent.postMessage("Post message from web", "*");
 // }
 
-document.addEventListener("message", function(event) {
-    alert('Received post message')
-    alert(event)
-    console.log("Received post message", event);
+// document.addEventListener("message", function(event) {
+//     alert('Received post message')
+//     alert(event)
+//     console.log("Received post message", event);
 
-    logMessage(event.data);
-}, false);
+//     logMessage(event.data);
+// }, false);
 
 function logMessage(message) {
     log.append((new Date()) + " " + message + "\n");
