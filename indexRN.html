@@ -24,6 +24,7 @@ document.querySelector("button").addEventListener('click', function (e) {
     alert('Send post message')
     console.log(postMessage, window.postMessage)
     window.postMessage("Post message from web");
+    alert(window.ReactNativeWebView)
      window.ReactNativeWebView.postMessage("Post message from RN webview web");
 });
 // document.querySelector("button").onclick = function() {
