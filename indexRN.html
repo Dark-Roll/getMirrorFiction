@@ -8,13 +8,22 @@
 <script>
 var log = document.querySelector("textarea");
 
-document.querySelector("button").onclick = function() {
-    console.log("Send post message");
+    
+document.querySelector("button").addEventListener('click', function (e) {
+//     sendMsg();
     alert('Send post message')
 
     // logMessage("Sending post message from web..");
     window.parent.postMessage("Post message from web", "*");
-}
+});
+    
+// document.querySelector("button").onclick = function() {
+//     console.log("Send post message");
+//     alert('Send post message')
+
+//     // logMessage("Sending post message from web..");
+//     window.parent.postMessage("Post message from web", "*");
+// }
 
 document.addEventListener("message", function(event) {
     alert('Received post message')
@@ -28,12 +37,12 @@ function logMessage(message) {
     log.append((new Date()) + " " + message + "\n");
 }
 
-setTimeout(() => {
-    alert(window.ff)
-    alert(window.share)
-    alert('fixed alert')
-    window.share()
-}, 1000);
+// setTimeout(() => {
+//     alert(window.ff)
+//     alert(window.share)
+//     alert('fixed alert')
+//     window.share()
+// }, 1000);
     
 </script>
 
