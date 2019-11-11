@@ -2,7 +2,7 @@
 <body>
 
 <button>Send post message from web</button>
-<div>Post message log 2</div>
+<div>Post message log 3</div>
 <textarea style="height: 50%; width: 100%;" readonly></textarea>
     
 
@@ -15,16 +15,17 @@ var log = document.querySelector("textarea");
 //     window.parent.postMessage("Post message from web", "*");
 // });
     
-document.addEventListener("message", function (event) {
-    alert('RN webview listener is called')
-  window.ReactNativeWebView.postMessage(event.data);
-}, false);    
+// document.addEventListener("message", function (event) {
+//     alert('RN webview listener is called')
+//   window.ReactNativeWebView.postMessage(event.data);
+// }, false);    
     
-// document.querySelector("button").addEventListener('click', function (e) {
-//     alert('Send post message')
-//     console.log(postMessage, window.postMessage)
-//     window.postMessage("Post message from web");
-// });
+document.querySelector("button").addEventListener('click', function (e) {
+    alert('Send post message')
+    console.log(postMessage, window.postMessage)
+    window.postMessage("Post message from web");
+     window.ReactNativeWebView.postMessage("Post message from RN webview web");
+});
 // document.querySelector("button").onclick = function() {
 //     console.log("Send post message");
 //     alert('Send post message')
