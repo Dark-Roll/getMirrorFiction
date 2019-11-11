@@ -16,7 +16,8 @@ var log = document.querySelector("textarea");
     
 document.querySelector("button").addEventListener('click', function (e) {
     alert('Send post message')
-    window.postMessage("Post message from web", "*");
+    console.log(postMessage, window.postMessage)
+    window.postMessage("Post message from web");
 });
 // document.querySelector("button").onclick = function() {
 //     console.log("Send post message");
