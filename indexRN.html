@@ -13,7 +13,7 @@ document.querySelector("button").onclick = function() {
     alert('Send post message')
 
     // logMessage("Sending post message from web..");
-    window.postMessage("Post message from web", "*");
+    window.parent.postMessage("Post message from web", "*");
 }
 
 document.addEventListener("message", function(event) {
