@@ -8,15 +8,16 @@
 <script>
 var log = document.querySelector("textarea");
 
+// //     will work in iframe
+// document.querySelector("button").addEventListener('click', function (e) {
+//     alert('Send post message')
+//     window.parent.postMessage("Post message from web", "*");
+// });
     
 document.querySelector("button").addEventListener('click', function (e) {
-//     sendMsg();
     alert('Send post message')
-
-    // logMessage("Sending post message from web..");
-    window.parent.postMessage("Post message from web", "*");
+    window.postMessage("Post message from web", "*");
 });
-    
 // document.querySelector("button").onclick = function() {
 //     console.log("Send post message");
 //     alert('Send post message')
