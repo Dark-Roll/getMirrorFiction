@@ -2,7 +2,7 @@
 <body>
 
 <button>Send post message from web</button>
-<div>Post message log 3</div>
+<div>Post message log 1.0.4</div>
 <textarea style="height: 50%; width: 100%;" readonly></textarea>
     
 
@@ -22,9 +22,10 @@ var log = document.querySelector("textarea");
     
 document.querySelector("button").addEventListener('click', function (e) {
     alert('Send post message')
-    console.log(postMessage, window.postMessage)
+//     console.log(postMessage, window.postMessage)
     window.postMessage("Post message from web");
     alert(window.ReactNativeWebView)
+    alert('fixed alert')
      window.ReactNativeWebView.postMessage("Post message from RN webview web");
 });
 // document.querySelector("button").onclick = function() {
