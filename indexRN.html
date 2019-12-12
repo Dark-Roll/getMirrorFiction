@@ -47,6 +47,11 @@ document.querySelector("button").addEventListener('click', function (e) {
 function logMessage(message) {
     log.append((new Date()) + " " + message + "\n");
 }
+    
+document.addEventListener("message", function(data) {
+    alert('in html event listener')
+    alert(data.data);
+});
 
 // setTimeout(() => {
 //     alert(window.ff)
