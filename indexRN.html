@@ -48,7 +48,7 @@ function logMessage(message) {
     log.append((new Date()) + " " + message + "\n");
 }
     
-document.addEventListener("message", function(data) {
+document.addEventListener("Post message from react native", function(data) {
     alert('in html event listener')
     alert(data.data);
 });
