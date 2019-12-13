@@ -52,6 +52,10 @@ document.addEventListener("data", function(data) {
     alert('in html event listener')
     alert(data.data);
 });
+    
+window.addEventListener('message', function (event) {
+    alert('message received: ' + event.data);
+});
 
 // setTimeout(() => {
 //     alert(window.ff)
