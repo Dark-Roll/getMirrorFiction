@@ -2,7 +2,7 @@
 <body>
 
 <button>Send post message from web</button>
-<div>Post message log 1.0.7</div>
+<div>Post message log 1.0.8</div>
 <textarea style="height: 50%; width: 100%;" readonly></textarea>
     
 
@@ -53,7 +53,7 @@ document.addEventListener("data", function(data) {
     alert(data.data);
 });
     
-document.addEventListener('message', function (event) {
+window.addEventListener('message', function (event) {
     alert('message received: ' + event.data);
 });
 
